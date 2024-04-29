@@ -16,7 +16,7 @@ function handleOnChange()
     populateForm();
 }
  
-function handleEditClick()
+function handleEditClick() // Function for when customer clicks edit 
 {
     makeEditable();
     hideButtons();
@@ -26,21 +26,21 @@ function handleEditClick()
     document.getElementById("saveButton").style.display = "inline-block";
 }
  
-function handleRentClick()
+function handleRentClick() // Function for when customer clicks rent
 {
     myBook.numAvlb--;
     document.getElementById("bookAvlb").value = myBook.numAvlb;
     putBook(myBook.id);
 }
  
-function handleReturnClick()
+function handleReturnClick() // Function for when customer clicks return
 {
     myBook.numAvlb++;
     document.getElementById("bookAvlb").value = myBook.numAvlb;
     putBook(myBook.id);
 }
  
-function handleDeleteClick()
+function handleDeleteClick() // Function for when customer clicks delete
 {
     deleteBook();
 }
@@ -52,7 +52,7 @@ function handleCancelSave()
     showButtons();
 }
 
-function handleEditSave(id)
+function handleEditSave(id) 
 {
     putBook(id);
     makeReadOnly();
@@ -67,7 +67,7 @@ function handleNewSave()
     blankFields();
 }
  
-function handleNewClick()
+function handleNewClick() // Function for when customer clicks new book
 {
     makeEditable();
     hideButtons();
@@ -80,7 +80,7 @@ function handleNewClick()
  
  
  
-function populateForm(){
+function populateForm(){ // Populates the form
     document.getElementById("bookTitle").value = myBook.title;
     document.getElementById("bookAuthor").value = myBook.author;
     document.getElementById("bookGenre").value = myBook.genre;
